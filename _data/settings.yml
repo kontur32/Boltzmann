@@ -9,7 +9,8 @@ google-ID: 'UA-112060364-1'
 menu:
 - {name: 'О клубе',   url: 'about.html'}
 - {name: 'Статьи', url: 'writing.html'}
-- {name: 'Контакты', url: 'contact.html'}
+- {name: 'Проекты', url: 'projects'}
+- {name: 'Контакты', url: 'contact'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:

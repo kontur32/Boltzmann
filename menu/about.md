@@ -1,7 +1,7 @@
 ---
 layout: page
 title: О клубе
-permalink: /клуб
+permalink: /about
 ---
 
 

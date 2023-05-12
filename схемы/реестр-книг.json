@@ -1,0 +1,107 @@
+{
+    "descriptions":[
+        {
+            "context":{
+                "@list":{
+                    "compute":{
+                        "xquery":"./file/table[@label=('2', '3', '4', '5')]/row"
+                    }
+                },
+                "люди":{
+                    "compute":{
+                        "sparql":{
+                            "context":{
+                                "RDF-endpoint":"http://ovz2.j40045666.px7zm.vps.myjino.ru:49408/tmp.lipers24.ru/sparql"
+                            },
+                            "include":{
+                                "URI":"C:/Users/kontu/Nextcloud2/Лицей Перспектива/example/лицей/запросы/люди.rq"
+                            },
+                            "xquery": "./sparql/bindings/_"
+                        }
+                    }
+                }
+            },
+            "about":{
+                "compute":{
+                    "xquery":"'https://semantics.lipers24.ru/ресурсы/издание#' || ./row/cell[@label='Номер в каталоге']/iri-to-uri(text())"
+                }
+            },
+            "properties":[
+                {
+                    "QName":{
+                        "NameSpace":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                        "PrefixedName":"rdf:type"
+                    },
+                    "URI": "https://semantics.lipers24.ru/онтология/издание"
+                },
+                {
+                    "QName":{
+                        "NameSpace":"https://semantics.lipers24.ru/schema/",
+                        "PrefixedName":"lip:комуВыдано"
+                    },
+                    "URI":{
+                        "compute":{
+                            "xquery":
+                            "let $фио := ./row/cell[@label='Кому выдано']/text() let $id := ./люди/_[фио[*:value = $фио]]/about/*:value/text() return $id"
+                        }
+                    }
+                },
+                {
+                    "QName":{
+                        "NameSpace":"https://semantics.lipers24.ru/schema/",
+                        "PrefixedName":"lip:ББК"
+                    },
+                    "literal":{
+                        "compute":{
+                            "xquery":"./row/cell[@label='ББК']/text()"
+                        }
+                    }
+                },
+                {
+                    "QName":{
+                        "NameSpace":"https://semantics.lipers24.ru/schema/",
+                        "PrefixedName":"lip:годИздания"
+                    },
+                    "literal":{
+                        "compute":{
+                            "xquery":"./row/cell[@label='Год издания']/text()"
+                        }
+                    }
+                },
+                {
+                    "QName":{
+                        "NameSpace":"https://semantics.lipers24.ru/schema/",
+                        "PrefixedName":"lip:название"
+                    },
+                    "literal":{
+                        "compute":{
+                            "xquery":"./row/cell[@label='Название']/text()"
+                        }
+                    }
+                },
+                {
+                    "QName":{
+                        "NameSpace":"https://semantics.lipers24.ru/schema/",
+                        "PrefixedName":"lip:датаВыдачи"
+                    },
+                    "literal":{
+                        "compute":{
+                            "xquery":"./row/cell[@label='Дата выдачи']/text()"
+                        }
+                    }
+                },
+                {
+                    "QName":{
+                        "NameSpace":"https://semantics.lipers24.ru/schema/",
+                        "PrefixedName":"lip:учебныйГод"
+                    },
+                    "literal":{
+                        "compute":{
+                            "xquery":"./row/cell[@label='Класс']/text()"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

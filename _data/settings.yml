@@ -23,11 +23,13 @@ social:
 
 # Customize site text
 pagination:
-  next_page: 'Newer'
-  previous_page: 'Older'
+  next_page: 'Следующая'
+  previous_page: 'Предыдущая'
 
 sharing_button_prompt: 'Поделиться!'
 
 related_posts: 'Вам также может быть интересно:'
 
 post_date_prefix: 'Дата публикации:'
+
+slogan: 'Вносите определенность!'

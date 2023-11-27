@@ -9,6 +9,7 @@ google-ID: 'UA-112060364-1'
 menu:
 - {name: 'О клубе',   url: 'about.html'}
 - {name: 'Статьи', url: 'writing.html'}
+- {name: 'События', url: 'events.html'}
 - {name: 'Проекты', url: 'projects'}
 - {name: 'Контакты', url: 'contact'}
 
